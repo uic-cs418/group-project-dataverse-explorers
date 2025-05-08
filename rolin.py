@@ -19,7 +19,7 @@ shootings = merged_df.dropna(subset=['PERP_RACE_y']).groupby('PERP_RACE_y').size
 
 x = np.arange(len(races))
 
-fig, ax = plt.subplots(figsize=(10, 6))
+fig, ax = plt.subplots(figsize=(7, 3))
 ax.set_facecolor('#f0f8ff')
 ax.grid(color='#add8e6', linestyle='-', linewidth=0.7)
 
@@ -37,10 +37,10 @@ ax.plot((-d, +d), (0.25-d, 0.25+d), **kwargs)
 ax.plot((-d, +d), (1-d, 1+d), **kwargs)
 
 ax.set_xticks(x)
-ax.set_xticklabels(races, rotation=45, ha='right', fontsize=10)
+ax.set_xticklabels(races, rotation=30, ha='right', fontsize=6)
 ax.set_xlabel('Race', labelpad=10)
 ax.set_ylabel('Number of Incidents', labelpad=10)
-ax.set_title('Incidents by Race (Arrests vs. Shootings)', pad=20)
+ax.set_title('Incidents by Race (Arrests vs. Shootings)', pad=5)
 
 for side in ['top','right']:
     ax.spines[side].set_visible(False)
