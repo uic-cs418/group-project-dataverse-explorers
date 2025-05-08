@@ -55,7 +55,7 @@ merged_df.to_csv("merged_nypd_data.csv", index=False)
 def Visualization():
     bias_race_boro = merged_df[['PERP_RACE_y', 'BORO']].dropna()
     race_boro_counts = bias_race_boro.groupby(['PERP_RACE_y', 'BORO']).size().reset_index(name='Arrest Count')
-    plt.figure(figsize=(10, 4))
+    plt.figure(figsize=(7, 2))
     sns.barplot(data=race_boro_counts, x='PERP_RACE_y', y='Arrest Count', hue='BORO', palette='Set1')
     plt.title('Are racially-biased arrests higher in certain NYC Boroughs?' )
     plt.xlabel('Race')
