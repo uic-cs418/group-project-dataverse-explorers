@@ -39,6 +39,7 @@ df_shooting = df_shooting[columns_to_keep]
 df_shooting.dropna(inplace=True)
 #print(df_shooting.head())
 
+
 df_hate_crimes.rename(columns={'Arrest Date': 'DATE', 'County': 'BORO'}, inplace=True)
 df_hate_crimes['DATE'] = pd.to_datetime(df_hate_crimes['DATE'])
 df_arrest.rename(columns={'ARREST_DATE': 'DATE', 'ARREST_BORO': 'BORO'}, inplace=True)
@@ -49,7 +50,10 @@ merged_df = pd.merge(df_arrest, df_shooting, on=['DATE', 'BORO'], how='outer')
 merged_df = pd.merge(merged_df, df_hate_crimes, on=['DATE', 'BORO'], how='outer')
 #print(merged_df.head())
 merged_df.to_csv("merged_nypd_data.csv", index=False)
-print(merged_df.head(2))
+
+def FinalDataset():
+    print(merged_df.head(2))
+
 
 
 ############## THE FOLLOWING IS SAAD CODE FOR EDA ################## 
