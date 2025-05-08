@@ -44,6 +44,7 @@
 # #merged_df.to_csv("merged_nypd_data.csv", index=False)
 
 
+<<<<<<< Updated upstream
 # # In[37]:
 
 
@@ -120,6 +121,8 @@
 # #merged_df.to_csv("merged_nypd_data.csv", index=False)
 
 
+=======
+>>>>>>> Stashed changes
 # In[37]:
 
 
@@ -204,6 +207,7 @@ merged_df = pd.merge(merged_df, df_hate_crimes, on=['DATE', 'BORO'], how='outer'
 #print(merged_df.head())
 merged_df.to_csv("merged_nypd_data.csv", index=False)
 #print(merged_df.head(2))
+<<<<<<< Updated upstream
 # In[40]:
 
 
@@ -221,6 +225,8 @@ merged_df.to_csv("merged_nypd_data.csv", index=False)
 
 
 
+=======
+>>>>>>> Stashed changes
 # In[40]:
 
 
@@ -264,7 +270,3 @@ def visualization2():
 
 
 # In[ ]:
-
-
-
-
